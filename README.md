@@ -4,7 +4,7 @@ The Releans SDK enables developers to use Releans Services in their code. You ca
 
 ## How to Build
 
-The generated SDK relies on [Node Package Manager](https://www.npmjs.com/) (NPM) being available to resolve dependencies. If you don't already have NPM installed, please go ahead and follow instructions to install NPM from [here](https://nodejs.org/en/download/).
+The Releans SDK relies on [Node Package Manager](https://www.npmjs.com/) (NPM) being available to resolve dependencies. If you don't already have NPM installed, please go ahead and follow instructions to install NPM from [here](https://nodejs.org/en/download/).
 The SDK also requires Node to be installed. If Node isn't already installed, please install it from [here](https://nodejs.org/en/download/)
 > NPM is installed by default when Node is installed
 
@@ -46,7 +46,7 @@ Select the folder of your SDK and click on `Select Folder` to open it up in Subl
 
 ### 2. Creating a Test File
 
-Now right click on the folder name and select the `New File` option to create a new test file. Save it as `index.js` Now import the generated NodeJS library using the following lines of code:
+Now right click on the folder name and select the `New File` option to create a new test file. Save it as `index.js` Now import the Releans NodeJS library using the following lines of code:
 
 ```js
 var lib = require('lib');
