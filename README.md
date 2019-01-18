@@ -91,7 +91,6 @@ Tests can be run in a number of ways:
 
 > To increase mocha's default timeout, you can change the `TEST_TIMEOUT` parameter's value in `TestBootstrap.js`.
 
-![Run Tests](https://apidocs.io/illustration/nodejs?step=runTests&controllerName=Releans%20APIController)
 
 ## Initialization
 
