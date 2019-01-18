@@ -1,0 +1,42 @@
+{
+  "name": "releans",
+  "version": "1.0.0",
+  "description": "The Releans SDK enables developers to use Releans Services in their code. You can get started in minutes.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "lint": "eslint lib"
+  },
+  "author": "Releans Support",
+  "bugs": {
+    "email": "support@releans.com"
+  },
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3"
+  },
+  "dependencies": {
+    "moment": "^2.17.1",
+    "request": "^2.55.0",
+    "winston": "^2.1.1"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "env": {
+      "commonjs": true,
+      "node": true,
+      "mocha": true
+    },
+    "rules": {
+      "indent": [
+        "error",
+        4
+      ],
+      "no-underscore-dangle": 0,
+      "strict": 0,
+      "prefer-rest-params": 0
+    }
+  }
+}
