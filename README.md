@@ -2,13 +2,9 @@
 
 The Releans SDK enables developers to use Releans Services in their code. You can get started in minutes.
 
-## Create Releans Account
-
-First, [sign up for a Releans account](https://platform.releans.com/site/signup) if you don't already have one, and make a note of your API key on the dashboard API page.
-
 ## How to Build
 
-The Releans SDK relies on [Node Package Manager](https://www.npmjs.com/) (NPM) being available to resolve dependencies. If you don't already have NPM installed, please go ahead and follow instructions to install NPM from [here](https://nodejs.org/en/download/).
+The generated SDK relies on [Node Package Manager](https://www.npmjs.com/) (NPM) being available to resolve dependencies. If you don't already have NPM installed, please go ahead and follow instructions to install NPM from [here](https://nodejs.org/en/download/).
 The SDK also requires Node to be installed. If Node isn't already installed, please install it from [here](https://nodejs.org/en/download/)
 > NPM is installed by default when Node is installed
 
@@ -17,7 +13,7 @@ To check if node and npm have been successfully installed, write the following c
 * `node --version`
 * `npm -version`
 
-![Version Check](https://apidocs.io/illustration/nodejs?step=versionCheck&workspaceFolder=Releans-Node)
+![Version Check](https://apidocs.io/illustration/nodejs?step=versionCheck&workspaceFolder=Releans%20API-Node)
 
 Now use npm to resolve all dependencies by running the following command in the root directory (of the SDK folder):
 
@@ -25,13 +21,13 @@ Now use npm to resolve all dependencies by running the following command in the 
 npm install
 ```
 
-![Resolve Dependencies](https://apidocs.io/illustration/nodejs?step=resolveDependency1&workspaceFolder=Releans-Node)
+![Resolve Dependencies](https://apidocs.io/illustration/nodejs?step=resolveDependency1&workspaceFolder=Releans%20API-Node)
 
 ![Resolve Dependencies](https://apidocs.io/illustration/nodejs?step=resolveDependency2)
 
 This will install all dependencies in the `node_modules` folder.
 
-Once dependencies are resolved, you will need to move the folder `Releans ` in to your `node_modules` folder.
+Once dependencies are resolved, you will need to move the folder `ReleansAPILib ` in to your `node_modules` folder.
 
 ## How to Use
 
@@ -46,11 +42,11 @@ Click on `File` and select `Open Folder`.
 
 Select the folder of your SDK and click on `Select Folder` to open it up in Sublime Text. The folder will become visible in the bar on the left.
 
-![Open Project](https://apidocs.io/illustration/nodejs?step=openProject&workspaceFolder=Releans-Node)
+![Open Project](https://apidocs.io/illustration/nodejs?step=openProject&workspaceFolder=Releans%20API-Node)
 
 ### 2. Creating a Test File
 
-Now right click on the folder name and select the `New File` option to create a new test file. Save it as `index.js` Now import the Releans NodeJS library using the following lines of code:
+Now right click on the folder name and select the `New File` option to create a new test file. Save it as `index.js` Now import the generated NodeJS library using the following lines of code:
 
 ```js
 var lib = require('lib');
@@ -58,9 +54,9 @@ var lib = require('lib');
 
 Save changes.
 
-![Create new file](https://apidocs.io/illustration/nodejs?step=createNewFile&workspaceFolder=Releans-Node)
+![Create new file](https://apidocs.io/illustration/nodejs?step=createNewFile&workspaceFolder=Releans%20API-Node)
 
-![Save new file](https://apidocs.io/illustration/nodejs?step=saveNewFile&workspaceFolder=Releans-Node)
+![Save new file](https://apidocs.io/illustration/nodejs?step=saveNewFile&workspaceFolder=Releans%20API-Node)
 
 ### 3. Running The Test File
 
@@ -70,7 +66,7 @@ To run the `index.js` file, open up the command prompt and navigate to the Path 
 node index.js
 ```
 
-![Run file](https://apidocs.io/illustration/nodejs?step=runProject&workspaceFolder=Releans-Node)
+![Run file](https://apidocs.io/illustration/nodejs?step=runProject&workspaceFolder=Releans%20API-Node)
 
 
 ## How to Test
@@ -95,6 +91,7 @@ Tests can be run in a number of ways:
 
 > To increase mocha's default timeout, you can change the `TEST_TIMEOUT` parameter's value in `TestBootstrap.js`.
 
+![Run Tests](https://apidocs.io/illustration/nodejs?step=runTests&controllerName=Releans%20APIController)
 
 ## Initialization
 
@@ -143,35 +140,13 @@ var controller = lib.MessageController;
 
 
 ```javascript
-function getAllMessages(callback)
-```
-
-#### Example Usage
-
-```javascript
-
-
-    controller.getAllMessages(function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="get_price_of_message"></a>![Method: ](https://apidocs.io/img/method.png ".MessageController.getPriceOfMessage") getPriceOfMessage
-
-> Return cost of sending a message to the number.
-
-
-```javascript
-function getPriceOfMessage(mobileNumber, callback)
+function getAllMessages(accept, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| mobileNumber |  ``` Required ```  | Mobile number you want to know the price of sending a message. |
+| accept |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -179,9 +154,9 @@ function getPriceOfMessage(mobileNumber, callback)
 
 ```javascript
 
-    var mobileNumber = 'mobileNumber';
+    var accept = '*/*';
 
-    controller.getPriceOfMessage(mobileNumber, function(error, response, context) {
+    controller.getAllMessages(accept, function(error, response, context) {
 
     
     });
@@ -195,13 +170,14 @@ function getPriceOfMessage(mobileNumber, callback)
 
 
 ```javascript
-function getViewMessage(id, callback)
+function getViewMessage(id, accept, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| id |  ``` Required ```  ``` DefaultValue ```  | Id of the message you need to return its details. |
+| id |  ``` Required ```  | TODO: Add a parameter description |
+| accept |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -210,8 +186,9 @@ function getViewMessage(id, callback)
 ```javascript
 
     var id = 'id';
+    var accept = '*/*';
 
-    controller.getViewMessage(id, function(error, response, context) {
+    controller.getViewMessage(id, accept, function(error, response, context) {
 
     
     });
@@ -225,15 +202,16 @@ function getViewMessage(id, callback)
 
 
 ```javascript
-function createSendSMSMessage(senderId, mobileNumber, message, callback)
+function createSendSMSMessage(accept, senderId, mobileNumber, message, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| senderId |  ``` Required ```  ``` DefaultValue ```  | Sender id to send the message from. |
-| mobileNumber |  ``` Required ```  ``` DefaultValue ```  | The mobile number supposed to receive the message. |
-| message |  ``` Required ```  ``` DefaultValue ```  | Message text. |
+| accept |  ``` Required ```  | TODO: Add a parameter description |
+| senderId |  ``` Required ```  | Sender id to send the message from. |
+| mobileNumber |  ``` Required ```  | The mobile number supposed to receive the message. |
+| message |  ``` Required ```  | Message text. |
 
 
 
@@ -241,11 +219,12 @@ function createSendSMSMessage(senderId, mobileNumber, message, callback)
 
 ```javascript
 
+    var accept = 'Accept';
     var senderId = 'senderId';
     var mobileNumber = 'mobileNumber';
     var message = 'message';
 
-    controller.createSendSMSMessage(senderId, mobileNumber, message, function(error, response, context) {
+    controller.createSendSMSMessage(accept, senderId, mobileNumber, message, function(error, response, context) {
 
     
     });
@@ -271,13 +250,14 @@ var controller = lib.SenderController;
 
 
 ```javascript
-function getSenderNameDetails(id, callback)
+function getSenderNameDetails(id, accept, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| id |  ``` Required ```  ``` DefaultValue ```  | The sender id you want its details |
+| id |  ``` Required ```  | TODO: Add a parameter description |
+| accept |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -285,9 +265,10 @@ function getSenderNameDetails(id, callback)
 
 ```javascript
 
-    var id = 'id';
+    var id = 'sender-id';
+    var accept = '*/*';
 
-    controller.getSenderNameDetails(id, function(error, response, context) {
+    controller.getSenderNameDetails(id, accept, function(error, response, context) {
 
     
     });
@@ -301,13 +282,15 @@ function getSenderNameDetails(id, callback)
 
 
 ```javascript
-function createSenderName(senderName, callback)
+function createSenderName(accept, contentType, body, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| senderName |  ``` Required ```  ``` DefaultValue ```  | Name you want to register as Sender Name |
+| accept |  ``` Required ```  | TODO: Add a parameter description |
+| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| body |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -315,9 +298,11 @@ function createSenderName(senderName, callback)
 
 ```javascript
 
-    var senderName = 'senderName';
+    var accept = 'text/plain';
+    var contentType = 'text/plain';
+    var body = 'Your sender name';
 
-    controller.createSenderName(senderName, function(error, response, context) {
+    controller.createSenderName(accept, contentType, body, function(error, response, context) {
 
     
     });
@@ -331,15 +316,23 @@ function createSenderName(senderName, callback)
 
 
 ```javascript
-function getAllSenders(callback)
+function getAllSenders(accept, callback)
 ```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accept |  ``` Required ```  | TODO: Add a parameter description |
+
+
 
 #### Example Usage
 
 ```javascript
 
+    var accept = '*/*';
 
-    controller.getAllSenders(function(error, response, context) {
+    controller.getAllSenders(accept, function(error, response, context) {
 
     
     });
@@ -365,15 +358,23 @@ var controller = lib.BalanceController;
 
 
 ```javascript
-function getBalance(callback)
+function getBalance(accept, callback)
 ```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accept |  ``` Required ```  | TODO: Add a parameter description |
+
+
 
 #### Example Usage
 
 ```javascript
 
+    var accept = 'text/plain';
 
-    controller.getBalance(function(error, response, context) {
+    controller.getBalance(accept, function(error, response, context) {
 
     
     });
